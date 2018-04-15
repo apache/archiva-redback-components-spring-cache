@@ -23,7 +23,7 @@
     <groupId>org.apache.archiva.redback.components</groupId>
     <artifactId>redback-components</artifactId>
     <version>2.5-SNAPSHOT</version>
-    <relativePath>../redback-components-parent/pom.xml</relativePath>
+    <relativePath>../parent/pom.xml</relativePath>
   </parent>
   <groupId>org.apache.archiva.redback.components.cache</groupId>
   <artifactId>spring-cache</artifactId>
@@ -32,20 +32,22 @@
   <packaging>pom</packaging>
 
   <description>Cache API with various implementations : simple HashMap, ehcache, oscache. Based on Spring container.</description>
-
-  <url>http://archiva.apache.org/redback/components/${project.artifactId}</url>
+  <url>${webUrl}/spring-cache/</url>
+  <properties>
+    <scmBrowseUrl>https://gitbox.apache.org/repos/asf?a=tree;p=archiva-redback-components-spring-cache.git</scmBrowseUrl>
+  </properties>
 
   <distributionManagement>
     <site>
       <id>apache.website</id>
-      <url>scm:svn:https://svn.apache.org/repos/asf/archiva/site-content/redback/components/${project.artifactId}</url>
+      <url>${siteUrl}/spring-cache/</url>
     </site>
   </distributionManagement>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/archiva/redback/redback-components/trunk/spring-cache/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/archiva/redback/redback-components/trunk/spring-cache</developerConnection>
-    <url>http://svn.apache.org/viewvc/archiva/redback/redback-components/trunk/spring-cache/</url>
+    <connection>scm:git:http://gitbox.apache.org/repos/asf/archiva-redback-components-spring-cache.git</connection>
+    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/archiva-redback-components-spring-cache.git</developerConnection>
+    <url>${scmBrowseUrl}</url>
   </scm>
 
   <modules>
@@ -59,5 +61,22 @@
       <artifactId>slf4j-api</artifactId>
     </dependency>
   </dependencies>
-
+  
+  <reporting>
+    <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jxr-plugin</artifactId>
+          <reportSets>
+            <reportSet>
+              <id>aggregate</id>
+              <inherited>false</inherited>
+              <reports>
+                <report>aggregate</report>
+              </reports>
+            </reportSet>
+          </reportSets>
+        </plugin>
+    </plugins>
+  </reporting>
 </project>

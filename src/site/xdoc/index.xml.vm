@@ -55,5 +55,12 @@ cacheBuilder.getCache( Wine.class )
         </p>
       </subsection>
     </section>
+    <section name="Submodules" >
+      <ul>
+#foreach( $module in $project.modules )
+        <li><a href="$module/index.html">$module</a></li>
+#end
+      </ul>
+    </section>
   </body>
 </document>

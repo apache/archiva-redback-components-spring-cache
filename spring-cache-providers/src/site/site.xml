@@ -19,7 +19,7 @@
   -->
 <project name="Spring Cache Component">
 
-  <publishDate format="dd MMM yyyy" position="left" />
+  <publishDate format="dd MMM yyyy" position="none" />
   <version position="left" />  
   <body>
     <menu ref="parent" />

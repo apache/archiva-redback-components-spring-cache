@@ -30,14 +30,18 @@
 
   <description>Commons Cache API Providers Parent Pom.</description>
 
-  <url>http://archiva.apache.org/redback/components/spring-cache/${project.artifactId}</url>
+  <url>${webUrl}/spring-cache/${project.artifactId}</url>
 
   <distributionManagement>
     <site>
       <id>apache.website</id>
-      <url>scm:svn:https://svn.apache.org/repos/asf/archiva/site-content/redback/components/spring-cache/${project.artifactId}</url>
+      <url>${siteUrl}/spring-cache/${project.artifactId}</url>
     </site>
   </distributionManagement>
+
+  <scm>
+    <url>${scmBrowseUrl};f=${project.artifactId}</url>
+  </scm>
 
   <dependencies>
     <dependency>
