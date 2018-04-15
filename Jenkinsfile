@@ -36,7 +36,7 @@ def deploySettings = 'DefaultMavenSettingsProvider.1331204114925'
 node(labels) {
 
     stage ('Clone Sources') {
-        git url: 'https://gitbox.apache.org/repos/asf/archiva-redback-components-parent.git'
+        git url: 'https://gitbox.apache.org/repos/asf/archiva-redback-components-spring-cache.git'
     }
 
     stage ('Build') {
