@@ -22,17 +22,41 @@
  * Jenkins Pipeline configuration.
  *
  */
-node {
+/**
+ *
+ * Jenkins Pipeline configuration.
+ *
+ */
+
+def labels = 'ubuntu'
+def buildJdk = 'JDK 1.8 (latest)'
+def buildMvn = 'Maven 3.5.2'
+def deploySettings = 'DefaultMavenSettingsProvider.1331204114925'
+
+node(labels) {
+
+    stage ('Clone Sources') {
+        git url: 'https://gitbox.apache.org/repos/asf/archiva-redback-components-parent.git'
+    }
+
     stage ('Build') {
-
-        git url: 'https://gitbox.apache.org/repos/asf/archiva-redback-components-spring-cache.git'
-
         withMaven(
-                // Maven installation declared in the Jenkins "Global Tool Configuration"
-                maven: 'Maven 3.5.2') {
+                maven: buildMvn,
+                jdk: buildJdk
+        ) {
             // Run the maven build
-            sh "mvn clean install -B -U -e -fae -Dmaven.compiler.fork=false -Pci-build"
+            sh "mvn clean install -B -U -e -fae -Dmaven.compiler.fork=false"
+        } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs reports...
+    }
 
+    stage ('Deploy') {
+        withMaven(
+                maven: buildMvn,
+                jdk: buildJdk,
+                mavenSettingsConfig: deploySettings
+        ) {
+            // Run the maven build
+            sh "mvn clean deploy -Dmaven.test.skip=true -B -U -e -fae -Dmaven.compiler.fork=false"
         } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs reports...
     }
 }
