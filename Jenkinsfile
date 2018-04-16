@@ -22,11 +22,6 @@
  * Jenkins Pipeline configuration.
  *
  */
-/**
- *
- * Jenkins Pipeline configuration.
- *
- */
 
 def labels = 'ubuntu'
 def buildJdk = 'JDK 1.8 (latest)'
