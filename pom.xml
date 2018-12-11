@@ -34,14 +34,8 @@
   <url>${webUrl}/spring-cache/</url>
   <properties>
     <scmBrowseUrl>https://gitbox.apache.org/repos/asf?a=tree;p=archiva-redback-components-spring-cache.git</scmBrowseUrl>
+    <site.staging.base>${project.basedir}/../site</site.staging.base>
   </properties>
-
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${siteUrl}/spring-cache/</url>
-    </site>
-  </distributionManagement>
 
   <scm>
     <connection>scm:git:http://gitbox.apache.org/repos/asf/archiva-redback-components-spring-cache.git</connection>

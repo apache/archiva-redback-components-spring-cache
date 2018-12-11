@@ -27,17 +27,11 @@
   <artifactId>spring-cache-providers</artifactId>
   <name>Spring Cache Providers</name>
   <packaging>pom</packaging>
-
   <description>Commons Cache API Providers Parent Pom.</description>
-
+  <properties>
+    <site.staging.base>${project.parent.basedir}/../site</site.staging.base>
+  </properties>
   <url>${webUrl}/spring-cache/${project.artifactId}</url>
-
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${siteUrl}/spring-cache/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
 
   <scm>
     <url>${scmBrowseUrl};f=${project.artifactId}</url>

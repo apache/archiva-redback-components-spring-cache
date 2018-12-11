@@ -29,15 +29,11 @@
   <packaging>jar</packaging>
 
   <description>Commons Test Cache API.</description>
+  <properties>
+    <site.staging.base>${project.parent.basedir}/../site</site.staging.base>
+  </properties>
 
   <url>${webUrl}/spring-cache/${project.artifactId}</url>
-
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${siteUrl}/spring-cache/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
 
   <scm>
     <url>${scmBrowseUrl};f=${project.artifactId}</url>

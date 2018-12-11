@@ -27,15 +27,11 @@
   <name>Spring Cache Provider :: oscache</name>
 
   <description>Commons Cache API : oscache implementation.</description>
+  <properties>
+    <site.staging.base>${project.parent.parent.basedir}/../site</site.staging.base>
+  </properties>
 
   <url>${webUrl}/spring-cache/spring-cache-providers/${project.artifactId}</url>
-
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${siteUrl}/spring-cache/spring-cache-providers/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
 
   <dependencies>
     <dependency>

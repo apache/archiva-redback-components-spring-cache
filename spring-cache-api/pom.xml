@@ -30,17 +30,13 @@
   <artifactId>spring-cache-api</artifactId>
   <packaging>bundle</packaging>
   <name>Spring Cache API</name>
-
+  <properties>
+    <site.staging.base>${project.parent.basedir}/../site</site.staging.base>
+  </properties>
   <description>Common Cache API.</description>
 
   <url>${webUrl}/spring-cache/${project.artifactId}</url>
 
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${siteUrl}/spring-cache/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
   <scm>
     <url>${scmBrowseUrl};f=${project.artifactId}</url>
   </scm>
