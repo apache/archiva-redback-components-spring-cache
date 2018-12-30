@@ -225,11 +225,11 @@ public class HashMapCache<V,T>
 
         if ( cacheMaxSize > 0 )
         {
-            cache = new LinkedHashMap<V,CacheableWrapper<T>>( cacheMaxSize );
+            cache = new LinkedHashMap<>( cacheMaxSize );
         }
         else
         {
-            cache = new LinkedHashMap<V,CacheableWrapper<T>>();
+            cache = new LinkedHashMap<>();
         }
     }
 
@@ -251,7 +251,7 @@ public class HashMapCache<V,T>
                 cache.remove( key );
             }
 
-            ret = cache.put( key, new CacheableWrapper<T>( value, System.currentTimeMillis() ) );
+            ret = cache.put( key, new CacheableWrapper<>( value, System.currentTimeMillis() ) );
         }
 
         manageCache();
@@ -275,7 +275,7 @@ public class HashMapCache<V,T>
                 cache.remove( key );
             }
 
-            cache.put( key, new CacheableWrapper<T>( value, System.currentTimeMillis() ) );
+            cache.put( key, new CacheableWrapper<>( value, System.currentTimeMillis() ) );
         }
 
         manageCache();

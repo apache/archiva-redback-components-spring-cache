@@ -28,7 +28,7 @@
   </parent>
 
   <artifactId>spring-cache-hashmap</artifactId>
-  <packaging>bundle</packaging>
+
   <name>Spring Cache Provider :: hashmap</name>
 
   <description>Commons Cache API : simple in memory HashMap implementation.</description>
@@ -44,27 +44,5 @@
       <artifactId>spring-aop</artifactId>
     </dependency>
   </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <configuration>
-          <instructions>
-            <Export-Package>
-              org.apache.archiva.redback.components.cache.hashmap;version=${project.version};-split-package:=merge-first
-            </Export-Package>
-            <Import-Package>
-              javax.annotation,
-              org.apache.archiva.redback.components.cache*;version=${project.version},
-              org.springframework*;version="[3,4)",
-              org.slf4j;resolution:=optional
-            </Import-Package>
-          </instructions>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>
