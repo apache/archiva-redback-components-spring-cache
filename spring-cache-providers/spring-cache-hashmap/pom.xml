@@ -29,7 +29,7 @@
 
   <artifactId>spring-cache-hashmap</artifactId>
 
-  <name>Spring Cache Provider :: hashmap</name>
+  <name>Redback Components :: Spring Cache Provider :: hashmap</name>
 
   <description>Commons Cache API : simple in memory HashMap implementation.</description>
   <properties>
@@ -39,9 +39,23 @@
   <url>${webUrl}/spring-cache/spring-cache-providers/${project.artifactId}</url>
 
   <dependencies>
+<!--
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-aop</artifactId>
+    </dependency>
+-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.inject</groupId>
+      <artifactId>javax.inject</artifactId>
     </dependency>
   </dependencies>
 

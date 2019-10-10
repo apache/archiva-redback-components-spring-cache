@@ -25,7 +25,7 @@
     <version>2.3-SNAPSHOT</version>
   </parent>
   <artifactId>spring-cache-providers</artifactId>
-  <name>Spring Cache Providers</name>
+  <name>Redback Components :: Spring Cache Providers</name>
   <packaging>pom</packaging>
   <description>Commons Cache API Providers Parent Pom.</description>
   <properties>
